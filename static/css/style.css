@@ -2,11 +2,11 @@
 
 body {
     font-family: 'Bebas Neue', sans-serif;
-    background-color: #fff;
+    background-color: rgb(239, 239, 239);
 }
 
 .custom-navbar {
-    background-color: #fff;
+    background-color: rgb(231, 231, 231);
 }
 
 .custom-navbar .navbar-brand {
@@ -73,13 +73,13 @@ body {
 
 .hero-image h1 {
     color: #fff;
-    font-size: 48px;
+    font-size: 84px;
     font-weight: bold;
 }
 
 .hero-image p {
     color: #fff;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 /* static/css/style.css */
@@ -224,7 +224,7 @@ body {
 
 /* Footer */
 .custom-footer {
-    background-color: #fff;
+    background-color: rgb(216, 216, 216);
     padding: 30px 0;
     /* Add some padding to the top and bottom */
     color: #555;
