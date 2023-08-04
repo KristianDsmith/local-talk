@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Record Releases</h1>
+  <ul>
+    {% for record in records %}
+      <li><a href="{% url 'record-detail' record.pk %}">{{ record.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -15,16 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import home, ArtistListView, ArtistDetailView, ArtistCreateView, ArtistUpdateView, ArtistDeleteView
-
+from blog.views import home, ArtistListView, ArtistDetailView, ArtistCreateView, ArtistUpdateView, ArtistDeleteView, RecordListView, RecordDetailView
+from blog.views import blog_list, blog_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('artists/', ArtistListView.as_view(), name='artist_list'),
-    path('artist/<int:pk>/', ArtistDetailView.as_view(), name='artist_detail'),
-    path('artist/new/', ArtistCreateView.as_view(), name='artist_new'),
-    path('artist/<int:pk>/edit/', ArtistUpdateView.as_view(), name='artist_edit'),
-    path('artist/<int:pk>/delete/',
-         ArtistDeleteView.as_view(), name='artist_delete'),
+    path('artists/', ArtistListView.as_view(), name='artist-list'),
+    path('artist/<int:pk>/', ArtistDetailView.as_view(), name='artist-detail'),
+    path('artists/create/', ArtistCreateView.as_view(), name='artist-create'),
+    path('artist/<int:pk>/update/', ArtistUpdateView.as_view(), name='artist-update'),
+    path('artist/<int:pk>/delete/', ArtistDeleteView.as_view(), name='artist-delete'),
+    path('records/', RecordListView.as_view(), name='record-list'),
+    path('record/<int:pk>/', RecordDetailView.as_view(), name='record-detail'),
+    path('blog/', blog_list, name='blog-list'),
+    path('blog/<int:pk>/', blog_detail, name='blog-detail'),
 ]
+
