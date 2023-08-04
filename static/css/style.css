@@ -149,6 +149,62 @@ body {
 .vinyl-link:hover {
     text-decoration: none;
 }
+
+/* ... Your existing CSS styles ... */
+
+/* Styles for the download and vinyl links in the Latest Releases and Albums sections */
+.download-link,
+.vinyl-link {
+    text-decoration: none;
+    /* Remove underline */
+    color: #555;
+    /* Change text color to the desired color */
+    cursor: pointer;
+    /* Change cursor to indicate a link */
+}
+
+.download-link:hover,
+.vinyl-link:hover {
+    text-decoration: none;
+    /* Remove underline when hovering */
+}
+
+/* Your existing CSS styles */
+
+/* Add custom styles for the Latest Releases and Albums sections */
+.latest-releases .track-item,
+.albums .track-item {
+    position: relative;
+}
+
+.latest-releases .track-item a,
+.albums .track-item a {
+    position: relative;
+    text-decoration: none;
+    color: #555;
+    /* Set the default color for the links */
+    cursor: pointer;
+}
+
+.latest-releases .track-item a::before,
+.albums .track-item a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Adjust this value to control the distance of the underline from the text */
+    width: 0;
+    height: 2px;
+    background-color: #59dd2d;
+    /* Change to your desired color for the underline */
+    transition: width 0.3s;
+}
+
+.latest-releases .track-item a:hover::before,
+.albums .track-item a:hover::before {
+    width: 100%;
+}
+
 /* Footer */
 .custom-footer {
     background-color: #fff;

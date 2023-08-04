@@ -27,5 +27,28 @@
     </div>
 </section>
 
+<!-- Albums section -->
+<section class="albums">
+    <div class="container">
+        <h2>Albums</h2>
+        <div class="row">
+            {% for album in albums %}
+            <div class="col-md-3 track-item">
+                {% if album.cover_image %}
+                <img src="{{ album.cover_image.url }}" alt="{{ album.title }}" width="250" height="250">
+                {% endif %}
+                <h3 class="track-title">{{ album.title }}</h3>
+                <div class="release-links">
+                    <a href="#" class="download-link">Download - £{{ album.download_price }}</a>
+                </div>
+                <div>
+                    <a href="#" class="vinyl-link">Vinyl - £{{ album.vinyl_price }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
 </section>
 {% endblock %}

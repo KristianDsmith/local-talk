@@ -1,13 +1,16 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Artist, Record, BlogPost, LatestRelease
+from .models import Artist, Record, BlogPost, LatestRelease, Album
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 def home(request):
     latest_releases = LatestRelease.objects.all().order_by('-release_date')[:4]
-    return render(request, 'home.html', {'latest_releases': latest_releases})
+    albums = Album.objects.all().order_by('-release_date')[:4]
+
+    return render(request, 'home.html', {'latest_releases': latest_releases, 'albums': albums})
+
 
 
 class ArtistListView(ListView):

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from .models import Artist, Record, BlogPost, LatestRelease
+from .models import Artist, Record, BlogPost, LatestRelease, Album
 
 
 class LatestReleaseAdmin(admin.ModelAdmin):
@@ -36,7 +36,13 @@ class LatestReleaseAdmin(admin.ModelAdmin):
     vinyl_link.short_description = 'Vinyl Link'
 
 
+class AlbumAdmin(admin.ModelAdmin):
+    list_display = ('title', 'artist', 'download_price',
+                    'vinyl_price', 'release_date')
+
+
 admin.site.register(Artist)
 admin.site.register(Record)
 admin.site.register(BlogPost)
 admin.site.register(LatestRelease, LatestReleaseAdmin)
+admin.site.register(Album, AlbumAdmin)

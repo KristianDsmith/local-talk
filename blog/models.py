@@ -11,12 +11,14 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
+
 class Record(models.Model):
     title = models.CharField(max_length=100)
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
     release_date = models.DateField()
     genre = models.CharField(max_length=50)
-    cover_image = models.ImageField(upload_to='record_covers/', blank=True, null=True)
+    cover_image = models.ImageField(
+        upload_to='record_covers/', blank=True, null=True)
 
 
 class BlogPost(models.Model):
@@ -44,6 +46,25 @@ class LatestRelease(models.Model):
     vinyl_price = models.DecimalField(
         max_digits=6, decimal_places=2, default=0.00)
     release_date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+
+class Album(models.Model):
+    title = models.CharField(max_length=100)
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
+    release_date = models.DateField()
+    cover_image = models.ImageField(
+        upload_to='album_covers/', blank=True, null=True)
+    download_link = models.URLField(
+        default='https://example.com/default-download-link')
+    download_price = models.DecimalField(
+        max_digits=6, decimal_places=2, default=0.00)
+    vinyl_link = models.URLField(
+        default='https://example.com/default-vinyl-link')
+    vinyl_price = models.DecimalField(
+        max_digits=6, decimal_places=2, default=0.00)
 
     def __str__(self):
         return self.title
