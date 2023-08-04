@@ -169,9 +169,26 @@ body {
     /* Remove underline when hovering */
 }
 
-/* Your existing CSS styles */
+.green-line {
+    height: 2px;
+    background-color: #59dd2d;
+    /* You can adjust the color as needed */
+    margin: 30px 0;
+    /* You can adjust the margin as needed to control the spacing */
+}
 
 /* Add custom styles for the Latest Releases and Albums sections */
+
+.albums {
+    margin-top: 50px;
+    /* Adjust this value to set the desired space */
+}
+
+.singles-section {
+    margin-top: 50px;
+    /* You can adjust the value as needed */
+}
+
 .latest-releases .track-item,
 .albums .track-item {
     position: relative;

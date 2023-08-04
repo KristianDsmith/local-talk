@@ -10,8 +10,8 @@
         <div class="row">
             {% for release in latest_releases %}
             <div class="col-md-3 track-item">
-                {% if release.image %}
-                <img src="{{ release.image.url }}" alt="{{ release.title }}" width="250" height="250">
+                {% if release.cover_image %}
+                <img src="{{ release.cover_image.url }}" alt="{{ release.title }}" width="250" height="250">
                 {% endif %}
                 <h3 class="track-title">{{ release.title }}</h3>
                 <p>{{ release.track_details }}</p>
@@ -27,6 +27,9 @@
     </div>
 </section>
 
+<!-- Green line -->
+<div class="green-line"></div>
+
 <!-- Albums section -->
 <section class="albums">
     <div class="container">
@@ -39,10 +42,10 @@
                 {% endif %}
                 <h3 class="track-title">{{ album.title }}</h3>
                 <div class="release-links">
-                    <a href="#" class="download-link">Download - £{{ album.download_price }}</a>
+                    <a href="{{ album.download_link }}" class="download-link">Download - £{{ album.download_price }}</a>
                 </div>
                 <div>
-                    <a href="#" class="vinyl-link">Vinyl - £{{ album.vinyl_price }}</a>
+                    <a href="{{ album.vinyl_link }}" class="vinyl-link">Vinyl - £{{ album.vinyl_price }}</a>
                 </div>
             </div>
             {% endfor %}
@@ -50,5 +53,32 @@
     </div>
 </section>
 
+<!-- Green line -->
+<div class="green-line"></div>
+
+<!-- Singles section -->
+<section class="singles">
+    <div class="container">
+        <h2>Singles</h2>
+        <div class="row">
+            {% for single in singles %}
+            <div class="col-md-3 track-item">
+                {% if single.cover_image %}
+                <img src="{{ single.cover_image.url }}" alt="{{ single.title }}" width="250" height="250">
+                {% endif %}
+                <h3 class="track-title">{{ single.title }}</h3>
+                <div class="release-links">
+                    <a href="{{ single.download_link }}" class="download-link">Download - £{{ single.download_price }}</a>
+                </div>
+                <div>
+                    <a href="{{ single.vinyl_link }}" class="vinyl-link">Vinyl - £{{ single.vinyl_price }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>
+
+<!-- Green line -->
+<div class="green-line"></div>
 {% endblock %}
