@@ -5,7 +5,7 @@ body {
 }
 
 .custom-navbar {
-    background-color: green;
+    background-color: #fff;
 }
 
 .custom-navbar .navbar-brand {
@@ -14,13 +14,61 @@ body {
     font-weight: bold;
 }
 
+.custom-navbar .navbar-nav {
+    padding-right: 100px;
+    /* Add padding to move the menu to the left */
+}
+
 .custom-navbar .navbar-nav .nav-link {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 50px;
+    position: relative;
 }
 
+.custom-navbar .navbar-nav .nav-link:last-child {
+    margin-right: 0;
+}
+
+.custom-navbar .navbar-nav .nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #59dd2d;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    transform-origin: left;
+    /* This line ensures the effect expands from the left */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.custom-navbar .logo-image {
+    height: 120px;
+    /* Adjust the height of the logo as needed */
+    margin-left: 100px;
+    /* Add some spacing between the logo and text */
+}
+
+/* footer */ 
 .custom-footer {
     background-color: green;
+    padding: 30px 0;
+    /* Add some padding to the top and bottom */
+}
+
+.custom-footer h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.custom-footer ul li a {
+    color: #fff;
+    text-decoration: none;
 }
