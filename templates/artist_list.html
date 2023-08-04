@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Artists</h2>
+{% for artist in artists %}
+<div>
+    <h3>{{ artist.name }}</h3>
+    <p>{{ artist.bio }}</p>
+    <img src="{{ artist.image.url }}" alt="{{ artist.name }}">
+</div>
+{% empty %}
+<p>No artists to show.</p>
+{% endfor %}
+{% endblock %}
