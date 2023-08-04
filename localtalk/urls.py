@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blog.views import home, ArtistListView, ArtistDetailView, ArtistCreateView, ArtistUpdateView, ArtistDeleteView, RecordListView, RecordDetailView
-from blog.views import blog_list, blog_detail
+from blog.views import blog_list, blog_detail, contact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +30,6 @@ urlpatterns = [
     path('record/<int:pk>/', RecordDetailView.as_view(), name='record-detail'),
     path('blog/', blog_list, name='blog-list'),
     path('blog/<int:pk>/', blog_detail, name='blog-detail'),
+    path('contact/', contact, name='contact'),
 ]
 

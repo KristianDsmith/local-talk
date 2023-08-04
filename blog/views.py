@@ -58,3 +58,6 @@ def blog_list(request):
 def blog_detail(request, pk):
     blog_post = BlogPost.objects.get(pk=pk)
     return render(request, 'blog_detail.html', {'blog_post': blog_post})
+
+def contact(request):
+    return render(request, 'contact.html')

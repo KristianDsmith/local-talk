@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gruppo&family=Permanent+Marker&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.custom-navbar {
+    background-color: green;
+}
+
+.custom-navbar .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.custom-footer {
+    background-color: green;
+}
