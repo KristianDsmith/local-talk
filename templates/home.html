@@ -1,7 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="hero">
-    <h1>Welcome to LocalTalk Record Label</h1>
-</div>
+<!-- Your existing hero image section goes here -->
+
+<!-- Latest Releases section -->
+<section class="latest-releases">
+    <div class="container">
+        <h2>Latest Releases</h2>
+        <div class="row">
+            {% for release in latest_releases %}
+            <div class="col-md-3 track-item">
+                {% if release.image %}
+                <img src="{{ release.image.url }}" alt="{{ release.title }}" width="250" height="250">
+                {% endif %}
+                <h3 class="track-title">{{ release.title }}</h3>
+                <p>{{ release.track_details }}</p>
+                <div class="release-links">
+                    <a href="{{ release.download_link }}" class="download-link">Download - £{{ release.download_price }}</a>
+                </div>
+                <div>
+                    <a href="{{ release.vinyl_link }}" class="vinyl-link">Vinyl - £{{ release.vinyl_price }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+</section>
 {% endblock %}
