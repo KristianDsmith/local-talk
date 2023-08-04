@@ -55,6 +55,32 @@ body {
     /* Add some spacing between the logo and text */
 }
 
+/* Hero section styles */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.269)), url('../images/local-talk-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-image h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-image p {
+    color: #fff;
+    font-size: 24px;
+}
+
 /* Footer */
 .custom-footer {
     background-color: #fff;
