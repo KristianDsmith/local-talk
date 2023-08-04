@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-kristiandsmith-local-tal-cqonnr1hqs.us2.codeanyapp.com', 'local-talk-2023-d167da4ad565.herokuapp.com', 'localhost']
+    '8000-kristiandsmith-local-tal-cqonnr1hqs.us2.codeanyapp.com', 'local-talk-2023-d167da4ad565.herokuapp.com']
 
 
 # Application definition
