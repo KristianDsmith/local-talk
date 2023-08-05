@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-<h2>Artists</h2>
-{% for artist in artists %}
-<div>
-    <h3>{{ artist.name }}</h3>
-    <p>{{ artist.bio }}</p>
-    <img src="{{ artist.image.url }}" alt="{{ artist.name }}">
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<div class="container">
+    <h2>Artists</h2>
+    <div class="row">
+        {% for artist in artists %}
+        <div class="col-md-3">
+            <div class="artist-item">
+                <h3>{{ artist.name }}</h3>
+                <p>{{ artist.bio }}</p>
+                <img src="{{ artist.image.url }}" alt="{{ artist.name }}" class="artist-img">
+            </div>
+        </div>
+        {% empty %}
+        <p>No artists to show.</p>
+        {% endfor %}
+    </div>
 </div>
-{% empty %}
-<p>No artists to show.</p>
-{% endfor %}
 {% endblock %}

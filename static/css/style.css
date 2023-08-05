@@ -299,3 +299,60 @@ body {
 i {
     margin-right: 5px;
 }
+
+
+/* styles.css */
+
+/* Set the width and height of the artist images */
+.artist-img {
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+}
+
+/* Add this CSS in your CSS file or style block in the HTML template */
+
+.record-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.record-item {
+    width: 23%;
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+    /* Add some space between items */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Add border for each item (optional) */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    /* Add transition for smooth hover effect */
+}
+
+.record-item img {
+    max-width: 100px;
+    /* Adjust the image size as needed */
+    height: auto;
+    margin-right: 10px;
+    /* Add space between the image and details */
+}
+
+.record-details {
+    flex: 1;
+}
+
+.record-details p {
+    margin: 0;
+    font-size: 14px;
+    /* Adjust the font size as needed */
+}
+
+/* Hover effect */
+.record-item:hover {
+    background-color: #98FB98;
+    /* Change the background color on hover (you can use any color you want) */
+}
