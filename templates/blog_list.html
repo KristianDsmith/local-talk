@@ -1,14 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Blog List</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
     <h1>Blog List</h1>
-    <ul>
+    <div>
         {% for blog_post in blog_posts %}
-        <li><a href="{% url 'blog-detail' blog_post.pk %}">{{ blog_post.title }}</a></li>
+        <div class="blog-item">
+            <div class="blog-preview">
+                {% if blog_post.image %}
+                <img class="blog-image" src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}">
+                {% endif %}
+                <div class="blog-info">
+                    <h2>{{ blog_post.title }}</h2>
+                    <a href="#post-{{ blog_post.pk }}" class="custom-link" onclick="toggleContent('post-{{ blog_post.pk }}')">Read More</a>
+                    <div id="post-{{ blog_post.pk }}" class="blog-content">
+                        <p>{{ blog_post.content }}</p>
+                        {% if blog_post.link_button %}
+                        <a href="{{ blog_post.link_button }}" class="custom-link">Link</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'scripts.js' %}"></script>
+{% endblock %}
+

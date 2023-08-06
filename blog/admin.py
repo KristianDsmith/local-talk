@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Record, Artist, BlogPost
+from django.utils.html import format_html
+
 
 
 class RecordAdmin(admin.ModelAdmin):
@@ -37,7 +39,17 @@ class RecordAdmin(admin.ModelAdmin):
 
     get_categories_display.short_description = 'Categories'
 
+class BlogPostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'link', 'image_preview')
+
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html('<img src="{}" width="100" />', obj.image.url)
+        return ""
+
+    image_preview.short_description = 'Image Preview'
+
 
 admin.site.register(Artist)
 admin.site.register(Record, RecordAdmin)
-admin.site.register(BlogPost)
+admin.site.register(BlogPost, BlogPostAdmin)

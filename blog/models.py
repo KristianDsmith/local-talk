@@ -79,6 +79,9 @@ class BlogPost(models.Model):
     content = models.TextField()
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     pub_date = models.DateTimeField(auto_now_add=True)
+    link = models.URLField(blank=True, null=True)  # Add this line for the link
+    image = models.ImageField(upload_to='blog_images/', blank=True, null=True) # Add this line for the image
+    link_button = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.title
