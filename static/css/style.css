@@ -136,13 +136,14 @@ body {
 
 /* Style for the news title */
 .news-text h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 5px;
 }
 
 /* Style for the news info */
 .news-text p {
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 /* Style for the read more link */
