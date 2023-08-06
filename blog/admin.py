@@ -3,13 +3,15 @@ from .models import Record, Artist, BlogPost
 from django.utils.html import format_html
 
 
-
 class RecordAdmin(admin.ModelAdmin):
     list_display = ('title', 'get_artist_name', 'release_date',
                     'category', 'download_link', 'vinyl_link')
-    
+
     def get_artist_name(self, obj):
-        return obj.artist.name
+        # Check if artist attribute is present in the obj
+        if hasattr(obj, 'artist') and obj.artist:
+            return obj.artist.name
+        return "No artist"  # Handle case when artist is not present
 
     get_artist_name.short_description = 'Artist'
 
@@ -38,6 +40,7 @@ class RecordAdmin(admin.ModelAdmin):
         return ', '.join(obj.category)
 
     get_categories_display.short_description = 'Categories'
+
 
 class BlogPostAdmin(admin.ModelAdmin):
     list_display = ('title', 'link', 'image_preview')

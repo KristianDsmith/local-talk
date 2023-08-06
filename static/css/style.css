@@ -58,7 +58,7 @@ body {
 
 /* Hero section styles */
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.269)), url('../images/local-talk-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.269)), url('https://res.cloudinary.com/dqe39dixt/image/upload/v1691332968/local-talk-hero_gxfxhm.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -199,36 +199,9 @@ body {
     margin-top: 20px;
 }
 
-.download-link,
-.vinyl-link {
-    text-decoration: none;
-    color: #555;
-    cursor: pointer;
-}
-
-.download-link:hover,
-.vinyl-link:hover {
-    text-decoration: none;
-}
-
 /* ... Your existing CSS styles ... */
 
 /* Styles for the download and vinyl links in the Latest Releases and Albums sections */
-.download-link,
-.vinyl-link {
-    text-decoration: none;
-    /* Remove underline */
-    color: #555;
-    /* Change text color to the desired color */
-    cursor: pointer;
-    /* Change cursor to indicate a link */
-}
-
-.download-link:hover,
-.vinyl-link:hover {
-    text-decoration: none;
-    /* Remove underline when hovering */
-}
 
 .green-line {
     height: 2px;
