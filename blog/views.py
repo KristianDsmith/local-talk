@@ -6,14 +6,23 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
 def home(request):
+    latest_blog_posts = BlogPost.objects.order_by('-pub_date')[:2]
     latest_releases = Record.objects.filter(
         category='LATEST').order_by('-release_date')[:4]
     albums = Record.objects.filter(
         category='ALBUM').order_by('-release_date')[:4]
     singles = Record.objects.filter(
         category='SINGLE').order_by('-release_date')[:4]
+    
+    context = {
+        'latest_blog_posts': latest_blog_posts, # Corrected variable name here
+        'latest_releases': latest_releases,
+        'albums': albums,
+        'singles': singles,
+    }
 
-    return render(request, 'home.html', {'latest_releases': latest_releases, 'albums': albums, 'singles': singles})
+    return render(request, 'home.html', context)
+
 
 
 

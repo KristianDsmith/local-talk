@@ -105,6 +105,67 @@ body {
     /* Remove underline when hovering */
 }
 
+/* Style for the news section */
+.latest-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style for each news item */
+.news-item {
+  width: calc(100% - 10px); /* Increase width to 75% */
+  border: 1px solid #59dd2d; /* Green border */
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: scale(1.05); /* Zoom in 5% */
+}
+
+/* Style for the news image */
+.news-image {
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  float: left;
+  margin-right: 10px;
+}
+
+/* Style for the news title */
+.news-text h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Style for the news info */
+.news-text p {
+  margin-bottom: 10px;
+}
+
+/* Style for the read more link */
+.news-text .read-more-link {
+  color: #555;
+  text-decoration: none;
+}
+
+/* Clear floats after each news item */
+.news-item::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.green-line {
+    border-top: 1px solid #59dd2d;
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+
+
 /* Add custom styles for the Latest Releases section */
 
 .latest-releases .track-item {
@@ -270,6 +331,7 @@ body {
 
 .blog-content {
     display: none;
+    text-transform: none;
 }
 
 .link-button {
@@ -329,7 +391,8 @@ a.read-more-link:hover::after {
 a.custom-link {
     position: relative;
     text-decoration: none;
-    color: #006400; /* Green text color */
+    color: #555; /* Green text color */
+
 }
 
 a.custom-link::after {
@@ -345,7 +408,7 @@ a.custom-link::after {
 }
 
 a.custom-link:hover {
-    color: #006400; /* Green text color on hover */
+    color: #555; /* Green text color on hover */
 }
 
 a.custom-link:hover::after {
