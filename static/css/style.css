@@ -243,9 +243,6 @@ body {
 }
 
 
-
-/* Add this CSS in your CSS file or style block in the HTML template */
-
 /* Styles for the artist section */
 .artist-container {
     display: flex;
@@ -279,8 +276,6 @@ body {
 }
 
 /* styling for blog */
-
-/* Same CSS as before */
 
 .blog-item {
     margin-bottom: 30px;
@@ -474,39 +469,27 @@ i {
 /* Set the width and height of the artist images */
 .artist-img {
     width: 200px;
-    /* Adjust the width as needed */
     height: 200px;
-    /* Adjust the height as needed */
 }
 
 /* Add this CSS in your CSS file or style block in the HTML template */
 
-.record-listing {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .record-item {
-    width: 23%;
-    /* Adjust the width as needed */
-    margin-bottom: 20px;
-    /* Add some space between items */
-    padding: 10px;
-    border: 1px solid #ccc;
-    /* Add border for each item (optional) */
     display: flex;
     align-items: center;
-    transition: background-color 0.3s;
-    /* Add transition for smooth hover effect */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.record-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .record-item img {
-    max-width: 100px;
-    /* Adjust the image size as needed */
-    height: auto;
+    max-width: 150px;
     margin-right: 10px;
-    /* Add space between the image and details */
 }
 
 .record-details {
@@ -515,15 +498,24 @@ i {
 
 .record-details p {
     margin: 0;
-    font-size: 14px;
+    font-size: 20px;
     /* Adjust the font size as needed */
 }
 
-/* Hover effect */
-.record-item:hover {
-    background-color: #98FB98;
-    /* Change the background color on hover (you can use any color you want) */
+.btn-primary {
+    background-color: #28a745;
+    /* Change this to your specific shade of green */
+    color: #ffffff;
+    /* White text */
+    border: none;
+    /* Remove default border */
 }
+
+.btn-primary:hover {
+    background-color: #218f3b;
+    /* Darker green on hover */
+}
+
 
 /* Responsive code starts here */
 

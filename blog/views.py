@@ -32,6 +32,9 @@ class ArtistListView(ListView):
     template_name = 'artist_list.html'
     context_object_name = 'artists'
 
+    def get_queryset(self):
+        return Artist.objects.order_by('name')
+
 
 class ArtistDetailView(UpdateView):
     model = Artist
@@ -58,6 +61,7 @@ class ArtistDeleteView(DeleteView):
     model = Artist
     template_name = 'artist_confirm_delete.html'
     success_url = '/artists/'
+
 
 class RecordListView(ListView):
     model = Record
