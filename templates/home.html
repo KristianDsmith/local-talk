@@ -1,19 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<!-- Your existing hero image section goes here -->
-
 <!-- latest news -->
 {% if latest_blog_posts %}
 <div class="latest-news">
-    <h2 class="news-section-title">News</h2> <!-- This is the title of the section -->
+    <h2 class="news-section-title">News</h2>
     <div class="row">
         {% for post in latest_blog_posts %}
         <div class="col-md-6">
             <div class="news-item">
                 <div class="news-content">
                     {% if post.image %}
-                    <img class="news-image" src="{{ post.image.url }}" alt="{{ post.title }}">
+                    <img class="news-image img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
                     {% endif %}
                     <div class="news-text">
                         <h3>{{ post.title }}</h3>
@@ -28,14 +26,8 @@
 </div>
 {% endif %}
 
-
-
-
 <!-- Green line -->
 <div class="green-line"></div>
-
-
-
 
 <!-- Latest Releases section -->
 <section class="latest-releases">
@@ -43,9 +35,9 @@
         <h2>Latest Releases</h2>
         <div class="row">
             {% for release in latest_releases %}
-            <div class="col-md-3 track-item">
+            <div class="col-md-3 track-item mb-4">
                 {% if release.cover_image %}
-                <img src="{{ release.cover_image.url }}" alt="{{ release.title }}" width="250" height="250">
+                <img src="{{ release.cover_image.url }}" alt="{{ release.title }}" class="img-fluid">
                 {% endif %}
                 <h3 class="track-title">{{ release.title }}</h3>
                 <p>{{ release.track_details }}</p>

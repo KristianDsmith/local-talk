@@ -36,7 +36,7 @@ body {
     content: '';
     width: 0;
     height: 3px;
-    background: #59dd2d;
+    background: #28a745;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -73,7 +73,7 @@ body {
 
 .hero-image h1 {
     color: #fff;
-    font-size: 84px;
+    font-size: 104px;
     font-weight: bold;
 }
 
@@ -186,7 +186,7 @@ body {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #59dd2d;
+    background-color: #28a745;
     transition: width 0.3s;
 }
 
@@ -232,7 +232,7 @@ body {
 
 .green-line {
     height: 2px;
-    background-color: #59dd2d;
+    background-color: #28a745;
     /* You can adjust the color as needed */
     margin: 30px 0;
     /* You can adjust the margin as needed to control the spacing */
@@ -259,10 +259,12 @@ body {
 .record-item {
     text-align: left;
     margin: 20px;
-    
     transition: transform 0.3s ease-in-out;
 }
 
+/*
+
+*/
 .record-item:hover {
     transform: scale(1.1); /* Scale the record-item on hover */
 }
@@ -348,14 +350,13 @@ body {
 }
 
 .custom-blog-link .read-more-link {
-    /* Style properties to match your navigation menu, e.g.: */
     color: #333;
     text-decoration: none;
     background: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
     transition: background 0.3s;
-    position: relative; /* This is necessary for the ::after pseudo-element */
+    position: relative; 
 }
 
 a.read-more-link {
@@ -368,16 +369,16 @@ a.read-more-link::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #59dd2d; /* Green underline color */
+    background: #28a745; 
     position: absolute;
     left: 0;
-    bottom: -3px; /* Adjust this value to control the distance of the green line from the text */
+    bottom: -3px; 
     transition: 0.5s;
     transform-origin: left;
 }
 
 a.read-more-link:hover {
-    color: #555; /* Green text color on hover */
+    color: #555; 
 }
 
 a.read-more-link:hover::after {
@@ -391,7 +392,7 @@ a.read-more-link:hover::after {
 a.custom-link {
     position: relative;
     text-decoration: none;
-    color: #555; /* Green text color */
+    color: #555; 
 
 }
 
@@ -399,16 +400,16 @@ a.custom-link::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #59dd2d; /* Green underline color */
+    background: #28a745;
     position: absolute;
     left: 0;
-    bottom: -3px; /* Adjust this value to control the distance of the green line from the text */
+    bottom: -3px;
     transition: 0.5s;
     transform-origin: left;
 }
 
 a.custom-link:hover {
-    color: #555; /* Green text color on hover */
+    color: #555; 
 }
 
 a.custom-link:hover::after {
@@ -420,18 +421,10 @@ a.custom-link:hover::after {
 }
 
 
-
-
-
-
-
-
-
 /* Footer */
 .custom-footer {
     background-color: rgb(216, 216, 216);
     padding: 30px 0;
-    /* Add some padding to the top and bottom */
     color: #555;
     display: flex;
     justify-content: space-between;
@@ -468,7 +461,7 @@ a.custom-link:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #59dd2d;
+    background: #28a745;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -495,9 +488,6 @@ a.custom-link:hover::after {
     list-style: none;
     margin-bottom: 10px;
 }
-
-
-
 
 
 /* Font Awesome icons */
@@ -562,3 +552,92 @@ i {
     /* Change the background color on hover (you can use any color you want) */
 }
 
+/* Responsive code starts here */
+
+@media screen and (max-width: 991px) {
+    .custom-navbar .navbar-nav {
+        padding-right: 0;
+    }
+    .custom-navbar .navbar-brand {
+        font-size: 18px;
+    }
+    .custom-navbar .nav-link {
+        font-size: 16px;
+        margin-right: 30px;
+    }
+    .custom-navbar .logo-image {
+        height: 80px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-image {
+        height: 300px;
+    }
+    .hero-image h1 {
+        font-size: 60px;
+    }
+    .hero-image p {
+        font-size: 24px;
+    }
+    .news-item {
+        width: 100%;
+    }
+    .news-image {
+        width: 150px;
+        height: 150px;
+    }
+    .albums, .singles-section {
+        margin-top: 30px;
+    }
+    .record-item {
+        width: 48%;
+    }
+    .artist-img {
+        width: 150px;
+        height: 150px;
+    }
+    .blog-image {
+    max-width: 200px;
+}
+}
+
+@media screen and (max-width: 991px) {
+    .custom-footer {
+        flex-direction: column;
+    }
+}
+
+/* Media query for 998px */
+@media (max-width: 998px) {
+    .record-item {
+        width: 48%;
+    }
+}
+
+/* Media query for 760px */
+@media (max-width: 760px) {
+     .record-item {
+        flex-direction: row; /* Resetting to row to align the image and details side by side */
+    }
+    .record-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Media query for 570px */
+@media (max-width: 570px) {
+    .record-details p {
+        font-size: 12px;
+    }
+}
+
+/* Media query for 450px */
+@media (max-width: 450px) {
+    .record-item img {
+        max-width: 80px;
+    }
+}
