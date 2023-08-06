@@ -58,7 +58,7 @@ body {
 
 /* Hero section styles */
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0.269)), url('https://res.cloudinary.com/dqe39dixt/image/upload/v1691332968/local-talk-hero_gxfxhm.jpg');
+    background-image: url('https://res.cloudinary.com/dqe39dixt/image/upload/v1691332968/local-talk-hero_gxfxhm.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ body {
 /* Style for each news item */
 .news-item {
   width: calc(100% - 10px); /* Increase width to 75% */
-  border: 1px solid #59dd2d; /* Green border */
+  border: 2px solid #28a745; /* Green border */
   padding: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow */
@@ -161,7 +161,7 @@ body {
 
 
 .green-line {
-    border-top: 1px solid #59dd2d;
+    border-top: 1px solid #28a745;
     margin: 20px 0; /* Adjust margin as needed */
 }
 
