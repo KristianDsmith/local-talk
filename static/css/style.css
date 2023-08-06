@@ -222,6 +222,41 @@ body {
     width: 100%;
 }
 
+/* Add this CSS in your CSS file or style block in the HTML template */
+
+/* Styles for the artist section */
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.artist-item {
+    text-align: left;
+    margin: 20px;
+    transform: translateZ(0); /* Hardware acceleration */
+    transition: transform 0.3s ease-in-out;
+}
+
+.artist-img {
+    width: 200px;
+    /* Set a fixed width for the images */
+    height: 200px;
+    /* Set a fixed height for the images */
+    object-fit: cover;
+}
+
+.artist-item:hover {
+    transform: scale(1.1);
+    /* Zoom in the image on hover */
+}
+
+.artist-item h3 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
 /* Footer */
 .custom-footer {
     background-color: rgb(216, 216, 216);
@@ -356,3 +391,4 @@ i {
     background-color: #98FB98;
     /* Change the background color on hover (you can use any color you want) */
 }
+

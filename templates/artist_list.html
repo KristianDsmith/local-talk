@@ -1,19 +1,15 @@
 {% extends 'base.html' %}
 
-{% load static %}
-
 {% block content %}
-<link rel="stylesheet" href="{% static 'styles.css' %}">
-
-<div class="container">
+<div class="container artist-container">
     <h2>Artists</h2>
     <div class="row">
         {% for artist in artists %}
         <div class="col-md-3">
             <div class="artist-item">
+                <img src="{{ artist.image.url }}" alt="{{ artist.name }}" class="artist-img">
                 <h3>{{ artist.name }}</h3>
                 <p>{{ artist.bio }}</p>
-                <img src="{{ artist.image.url }}" alt="{{ artist.name }}" class="artist-img">
             </div>
         </div>
         {% empty %}

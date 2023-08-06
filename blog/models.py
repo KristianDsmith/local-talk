@@ -7,7 +7,6 @@ from django.utils.html import format_html
 
 class Artist(models.Model):
     name = models.CharField(max_length=200)
-    bio = models.TextField()
     # assuming you're using some form of image handling
     image = models.ImageField(upload_to='artists/', blank=True, null=True)
 
@@ -23,7 +22,6 @@ class Record(models.Model):
     )
 
     title = models.CharField(max_length=100)
-    artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
     release_date = models.DateField()
     cover_image = models.ImageField(
         upload_to='record_covers/', blank=True, null=True)

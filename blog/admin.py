@@ -3,8 +3,13 @@ from .models import Record, Artist, BlogPost
 
 
 class RecordAdmin(admin.ModelAdmin):
-    list_display = ('title', 'artist', 'release_date',
-                    'get_categories_display', 'download_link', 'vinyl_link')
+    list_display = ('title', 'get_artist_name', 'release_date',
+                    'category', 'download_link', 'vinyl_link')
+    
+    def get_artist_name(self, obj):
+        return obj.artist.name
+
+    get_artist_name.short_description = 'Artist'
 
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
