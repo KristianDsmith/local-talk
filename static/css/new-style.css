@@ -285,7 +285,7 @@ body {
 
 .read-more-link {
     cursor: pointer;
-    color: blue;
+    color: #555;
     text-decoration: underline;
 }
 
@@ -297,14 +297,14 @@ body {
 .link-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #218f3b;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .link-button:hover {
-    background-color: #0056b3;
+    background-color: #218f3b;
 }
 
 .custom-blog-link .read-more-link {
@@ -523,5 +523,192 @@ i {
 
 .btn-primary:hover {
     background-color: #218f3b;
+}
+
+@media (max-width: 1000px) {
+    .latest-releases .track-item img,
+    .albums .track-item img,
+    .singles .track-item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .custom-navbar .logo-image {
+    height: 80px;
+    }
+
+    .hero-image h1 {
+        font-size: 80px;
+        /* Reduce font size */
+        margin-bottom: 10px;
+        /* Add space below the heading */
+    }
+
+    .hero-image p {
+        font-size: 24px;
+        /* Reduce font size */
+    }
+
+    .news-item {
+        margin-bottom: 15px;
+        /* Reduce space below news items */
+    }
+
+    .artist-item {
+        margin: 10px;
+        /* Reduce margin around artist items */
+    }
+
+    .albums,
+    .singles-section {
+        margin-top: 30px;
+        /* Reduce top margin */
+    }
+
+    .custom-footer {
+        flex-direction: column;
+        /* Stack footer items vertically */
+        align-items: center;
+    }
+
+    .custom-footer ul li a {
+        padding-right: 5px;
+        /* Reduce padding right of footer links */
+    }
+
+    .latest-releases,
+    .albums,
+    .singles-section {
+        margin-top: 30px;
+            /* Adjust top margin */
+    }
+    
+    .latest-releases .track-item .track-title,
+    .albums .singles .track-item .track-title,
+    .singles-section .track-item .track-title {
+        font-size: 20px;
+                     
+        }
+}
+
+
+@media screen and (min-width: 770px) {
+
+    .custom-navbar .logo-image {
+            height: 60px;
+        }
+
+    /* Style for the news section */
+    .latest-news {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Style for each news item */
+    .news-item {
+        width: calc(90% - 10px);
+        /* You can adjust the width as per your design */
+        border: 2px solid #28a745;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .news-item:hover {
+        transform: scale(1.05);
+    }
+
+    /* Style for the news image */
+    .news-image {
+        width: 300px;
+        height: 300px;
+        float: none;
+        margin-right: 0;
+    }
+
+    /* Style for the news title */
+    .news-text h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    /* Style for the news info */
+    .news-text p {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    /* Style for the read more link */
+    .news-text .read-more-link {
+        color: #555;
+        text-decoration: none;
+    }
+
+    /* Clear floats after each news item */
+    .news-item::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .artist-container .row .col-md-3 {
+        max-width: 50%;
+    }
+    
+    .artist-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .artist-item h3 {
+        font-size: 16px;
+    }
+
+    .col-md-4 {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+        
+    .btn-primary {
+    font-size: 14px;
+    padding: 3px 8px;
+    }
+
+    .record-details p {
+        font-size: 18px;
+   
+    }    
+                
+}
+
+@media screen and (max-width: 480px) {
+
+    .custom-navbar .logo-image {
+            height: 50px;
+            margin-left: 50px;
+        }
+
+    .blog-preview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .blog-image {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .read-more-link {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
 }
 
