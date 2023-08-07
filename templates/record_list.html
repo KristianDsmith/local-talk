@@ -11,7 +11,7 @@
             <img src="{{ record.cover_image.url }}" alt="{{ record.title }}" class="img-fluid">
             {% endif %}
             <div class="record-details">
-                <p><strong>Artist:</strong> {{ record.artist.name }}</p>
+                <p><strong>Artist:</strong> {{ record.artist_name }}</p> <!-- Changed from record.artist.name -->
                 <p><strong>Title:</strong> {{ record.title }}</p>
                 <p><strong>Release Date:</strong> {{ record.release_date }}</p>
                 <a href="{{ record.external_link }}" class="btn btn-primary" target="_blank">Listen</a>

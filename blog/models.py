@@ -20,7 +20,8 @@ class Record(models.Model):
         ('LATEST', 'Latest Release'),
         ('SINGLE', 'Single'),
     )
-
+    
+    artist_name = models.CharField(max_length=200, blank=True, null=True)
     title = models.CharField(max_length=100)
     release_date = models.DateField()
     cover_image = models.ImageField(
@@ -54,7 +55,7 @@ class RecordAdminForm(forms.ModelForm):
 
 class RecordAdmin(admin.ModelAdmin):
     form = RecordAdminForm
-    list_display = ('title', 'artist', 'release_date',
+    list_display = ('title', 'artist_name', 'release_date',
                     'category', 'download_link', 'vinyl_link')
 
     def download_link(self, obj):

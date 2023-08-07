@@ -67,6 +67,7 @@ class RecordListView(ListView):
     model = Record
     template_name = 'record_list.html'
     context_object_name = 'records'
+    ordering = '-release_date'
 
 
 class RecordDetailView(DetailView):

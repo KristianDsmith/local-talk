@@ -4,7 +4,7 @@ from django.utils.html import format_html
 
 
 class RecordAdmin(admin.ModelAdmin):
-    list_display = ('title', 'get_artist_name', 'release_date',
+    list_display = ('title', 'artist_name', 'release_date',
                     'category', 'download_link', 'vinyl_link')
 
     def get_artist_name(self, obj):
