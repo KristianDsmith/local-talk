@@ -565,31 +565,7 @@ i {
         /* Reduce top margin */
     }
 
-    .custom-footer {
-        flex-direction: column;
-        /* Stack footer items vertically */
-        align-items: center;
-    }
-
-    .custom-footer ul li a {
-        padding-right: 5px;
-        /* Reduce padding right of footer links */
-    }
-
-    .latest-releases,
-    .albums,
-    .singles-section {
-        margin-top: 30px;
-            /* Adjust top margin */
-    }
     
-    .latest-releases .track-item .track-title,
-    .albums .singles .track-item .track-title,
-    .singles-section .track-item .track-title {
-        font-size: 20px;
-                     
-        }
-}
 
 
 @media screen and (min-width: 770px) {
