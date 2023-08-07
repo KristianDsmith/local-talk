@@ -69,6 +69,16 @@ class RecordListView(ListView):
     context_object_name = 'records'
     ordering = '-release_date'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['records_2023'] = Record.objects.filter(
+            release_date__year=2023).order_by('-release_date')
+        context['records_2022'] = Record.objects.filter(
+            release_date__year=2022).order_by('-release_date')
+        context['records_2021'] = Record.objects.filter(
+            release_date__year=2021).order_by('-release_date')
+        return context
+
 
 class RecordDetailView(DetailView):
     model = Record

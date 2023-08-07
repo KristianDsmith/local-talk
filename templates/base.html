@@ -10,7 +10,7 @@
 
     <title>LocalTalk Record Label</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/new-style.css' %}" rel="stylesheet">
     
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -37,10 +37,10 @@
                     <a class="nav-link" href="{% url 'artist-list' %}">Artists</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'record-list' %}">Records</a>
+                    <a class="nav-link" href="{% url 'record-list' %}">Releases</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'blog-list' %}">Blog</a>
+                    <a class="nav-link" href="{% url 'blog-list' %}">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
@@ -94,8 +94,8 @@
                 <ul class="list-unstyled">
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'artist-list' %}">Artists</a></li>
-                    <li><a href="{% url 'record-list' %}">Records</a></li>
-                    <li><a href="{% url 'blog-list' %}">Blog</a></li>
+                    <li><a href="{% url 'record-list' %}">Releases</a></li>
+                    <li><a href="{% url 'blog-list' %}">News</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>

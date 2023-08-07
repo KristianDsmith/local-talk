@@ -1,24 +1,77 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Record Releases</h1>
+
 <div class="container">
-    <div class="row">
-        {% for record in records %}
-        <div class="col-12 record-item mb-4">
-            <!-- Using col-12 to make 1 column -->
-            {% if record.cover_image %}
-            <img src="{{ record.cover_image.url }}" alt="{{ record.title }}" class="img-fluid">
-            {% endif %}
-            <div class="record-details">
-                <p><strong>Artist:</strong> {{ record.artist_name }}</p> <!-- Changed from record.artist.name -->
-                <p><strong>Title:</strong> {{ record.title }}</p>
-                <p><strong>Release Date:</strong> {{ record.release_date }}</p>
-                <a href="{{ record.external_link }}" class="btn btn-primary" target="_blank">Listen</a>
-                <!-- Adding a link to external site -->
+    <h1>Releases</h1>
+
+    <h3 class="section-heading">2023</h3>
+    <div class="record-listing-container">
+        <div class="row">
+            {% for record in records_2023 %}
+            <div class="col-md-4 record-item mb-4 custom-gap">
+                <!-- Using col-md-6 to make 2 columns -->
+                {% if record.cover_image %}
+                <img src="{{ record.cover_image.url }}" alt="{{ record.title }}" class="img-fluid">
+                {% endif %}
+                <div class="record-details">
+                    <p><strong>Artist:</strong> {{ record.artist_name }}</p>
+                    <p><strong>Title:</strong> {{ record.title }}</p>
+                    <p><strong>Release Date:</strong> {{ record.release_date }}</p>
+                    <a href="{{ record.external_link }}" class="btn btn-primary" target="_blank">Listen</a>
+                </div>
             </div>
-        </div>
-        {% endfor %}
+            {% endfor %}
+        </div> <!-- Close the row div here -->
     </div>
+
+    <!-- Green line -->
+    <div class="green-line"></div>
+
+    
+    <div class="record-listing-container">
+        <h3 class="section-heading">2022</h3>
+        
+        <div class="row">
+            {% for record in records_2022 %}
+            <div class="col-md-4 record-item mb-4 custom-gap">
+                <!-- Using col-md-6 to make 2 columns -->
+                {% if record.cover_image %}
+                <img src="{{ record.cover_image.url }}" alt="{{ record.title }}" class="img-fluid">
+                {% endif %}
+                <div class="record-details">
+                    <p><strong>Artist:</strong> {{ record.artist_name }}</p>
+                    <p><strong>Title:</strong> {{ record.title }}</p>
+                    <p><strong>Release Date:</strong> {{ record.release_date }}</p>
+                    <a href="{{ record.external_link }}" class="btn btn-primary" target="_blank">Listen</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div> <!-- Close the row div here -->
+        
+    </div>
+<!-- Green line -->
+<div class="green-line"></div>
+    
+    <div class="record-listing-container">
+        <h3 class="section-heading">2021</h3>
+        <div class="row">
+            {% for record in records_2021 %}
+            <div class="col-md-4 record-item mb-4 custom-gap">
+                <!-- Using col-md-6 to make 2 columns -->
+                {% if record.cover_image %}
+                <img src="{{ record.cover_image.url }}" alt="{{ record.title }}" class="img-fluid">
+                {% endif %}
+                <div class="record-details">
+                    <p><strong>Artist:</strong> {{ record.artist_name }}</p>
+                    <p><strong>Title:</strong> {{ record.title }}</p>
+                    <p><strong>Release Date:</strong> {{ record.release_date }}</p>
+                    <a href="{{ record.external_link }}" class="btn btn-primary" target="_blank">Listen</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div> <!-- Close the row div here -->
+    </div>
+
 </div>
 {% endblock %}
