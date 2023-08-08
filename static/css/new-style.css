@@ -449,6 +449,16 @@ a.custom-link:hover::after {
     margin-bottom: 10px;
 }
 
+.footer-link {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #218f3b;
+    text-decoration: none;
+}
+
 
 /* Font Awesome icons */
 i {
