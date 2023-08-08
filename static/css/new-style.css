@@ -116,6 +116,8 @@ body {
 .news-item {
     width: calc(100% - 10px);
     /* Increase width to 75% */
+    height: 250px;
+    overflow: auto;
     border: 2px solid #28a745;
     /* Green border */
     padding: 10px;
@@ -549,10 +551,55 @@ i {
         /* Reduce font size */
     }
 
-    .news-item {
-        margin-bottom: 15px;
-        /* Reduce space below news items */
-    }
+        .news-item {
+            width: calc(100% - 10px);
+            /* You can adjust the width as per your design */
+            height: 475px;
+            border: 2px solid #28a745;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            
+        }
+    
+        .news-item:hover {
+            transform: scale(1.05);
+        }
+    
+        /* Style for the news image */
+        .news-image {
+            width: 300px;
+            height: 300px;
+            float: none;
+            margin-right: 0;
+        }
+    
+        /* Style for the news title */
+        .news-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    
+        /* Style for the news info */
+        .news-text p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    
+        /* Style for the read more link */
+        .news-text .read-more-link {
+            color: #555;
+            text-decoration: none;
+        }
+    
+        /* Clear floats after each news item */
+        .news-item::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
 
     .artist-item {
         margin: 10px;
@@ -583,8 +630,9 @@ i {
 
     /* Style for each news item */
     .news-item {
-        width: calc(90% - 10px);
+        width: calc(100% - 10px);
         /* You can adjust the width as per your design */
+        height: 500px;
         border: 2px solid #28a745;
         padding: 10px;
         margin-bottom: 20px;
@@ -685,6 +733,24 @@ i {
         display: block;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .news-item {
+        width: calc(100% - 10px);
+        /* You can adjust the width as per your design */
+        height: 325px;
+        border: 2px solid #28a745;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .news-image {
+        width: 150px !important;
+        height: 150px !important;
+        float: none;
+        margin-right: 0;
     }
 }
 
